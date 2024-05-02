@@ -24,4 +24,7 @@ function updateExporters(exporters) {
     return exporters;
 }
 
-addEventListener("exportersDidInitialize", (event) => event.detail.exporters.update(updateExporters));
+// addEventListener("exportersDidInitialize", (event) => event.detail.exporters.update(updateExporters));
+
+const exporters = require("anki/ExportPage").exporters;
+updateExporters(exporters);
